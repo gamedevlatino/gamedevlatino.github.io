@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Videos | Gamedev Latino</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Videos tutoriales, entrevistas y demostraciones sobre desarrollo de videojuegos en español, para aprender de manera visual.">
+	<link rel="stylesheet" href="/assets/css/variables.css">
+	<link rel="stylesheet" href="/assets/css/global.css">
+	<link rel="stylesheet" href="/assets/css/header.css">
+	<link rel="stylesheet" href="/assets/css/footer.css">
+	<link rel="stylesheet" href="/assets/css/card.css">
+	<style>
+		.video-embed {
+			position: relative;
+			width: 100%;
+			padding-bottom: 56.25%;
+			margin-bottom: 1rem;
+			border-radius: 1rem;
+			overflow: hidden;
+			background: #101820;
+		}
+		.video-embed iframe {
+			position: absolute;
+			top: 0; left: 0; width: 100%; height: 100%;
+			border: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="header-include"></div>
+	<main>
+		<section aria-labelledby="videos-titulo">
+			<h1 id="videos-titulo">Videos Tutoriales y Entrevistas</h1>
+			<p>
+				Aprende de manera visual con videos explicativos y entrevistas a desarrolladores de videojuegos de Latinoamérica.
+			</p>
+			<div class="card-list">
+				<article class="card">
+					<div class="video-embed">
+						<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video de ejemplo 1" allowfullscreen></iframe>
+					</div>
+					<div class="card__content">
+						<h2 class="card__title">Introducción a Godot: Primeros pasos</h2>
+						<p class="card__desc">Descubre cómo instalar Godot y crear tu primer proyecto en minutos.</p>
+						<a href="https://youtu.be/dQw4w9WgXcQ" class="card__button" target="_blank" rel="noopener">Ver en YouTube</a>
+					</div>
+				</article>
+				<article class="card">
+					<div class="video-embed">
+						<iframe src="https://www.youtube.com/embed/oHg5SJYRHA0" title="Video de ejemplo 2" allowfullscreen></iframe>
+					</div>
+					<div class="card__content">
+						<h2 class="card__title">Entrevista: Desarrolladores Latinos</h2>
+						<p class="card__desc">Conversamos con un equipo indie sobre los retos de crear juegos desde Latinoamérica.</p>
+						<a href="https://youtu.be/oHg5SJYRHA0" class="card__button" target="_blank" rel="noopener">Ver en YouTube</a>
+					</div>
+				</article>
+			</div>
+		</section>
+	</main>
+	<div id="footer-include"></div>
+	<script src="/js/include.js"></script>
+</body>
+</html>

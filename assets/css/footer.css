@@ -1,0 +1,24 @@
+.footer {
+	background: var(--azul-oceano);
+	color: var(--color-texto-principal);
+	padding: 2rem 1rem 1rem 1rem;
+	text-align: center;
+	font-size: 1rem;
+	margin-top: 3rem;
+}
+
+.footer__social {
+	margin: 1rem 0;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.footer__social-link {
+	color: var(--amarillo-acento);
+	font-size: 1.25rem;
+}
+
+.footer__social-link:hover {
+	color: var(--purpura-suave);
+}

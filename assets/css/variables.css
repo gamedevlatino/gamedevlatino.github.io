@@ -1,0 +1,14 @@
+:root {
+	/* Paleta de colores Gamedev Latino */
+	--amarillo-acento: #FFD700;
+	--naranja-principal: #FF8C00;
+	--azul-oceano: #4682B4;
+	--azul-fondo: #1C2833;
+	--purpura-suave: #9370DB;
+
+	--color-texto-principal: #fff;
+	--color-fondo: var(--azul-fondo);
+
+	/* Tipografía */
+	--fuente-principal: 'Inter', Arial, Helvetica, sans-serif;
+}
