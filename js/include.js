@@ -8,6 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			.then(html => { el.innerHTML = html; });
 	}
 
-	includeHTML('#header-include', '/components/_header.html');
-	includeHTML('#footer-include', '/components/_footer.html');
+	includeHTML('#header-include', 'components/_header.html');
+	includeHTML('#footer-include', 'components/_footer.html');
 });
