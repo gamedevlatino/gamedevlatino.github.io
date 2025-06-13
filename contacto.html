@@ -19,6 +19,30 @@
 			margin: 2rem auto;
 			max-width: 450px;
 		}
+		.calendly-invite {
+		margin-bottom: 1.5rem;
+		}
+
+		.calendly-btn {
+			display: inline-block;
+			background: var(--naranja-principal);
+			color: #fff;
+			font-weight: bold;
+			padding: 0.75rem 1.5rem;
+			border-radius: 2rem;
+			font-size: 1.08rem;
+			text-decoration: none;
+			transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+			box-shadow: 0 1px 4px rgba(28,40,51,0.08);
+			margin-top: 0.5rem;
+		}
+
+		.calendly-btn:hover,
+		.calendly-btn:focus {
+			background: var(--amarillo-acento);
+			color: var(--azul-oceano);
+			outline: none;
+		}
 	</style>
 </head>
 <body>
@@ -26,12 +50,15 @@
 	<main>
 		<section aria-labelledby="contacto-titulo">
 			<h1 id="contacto-titulo">Contacto y Colaboraciones</h1>
-			<p>
-				¿Tienes dudas, quieres colaborar o invitarme a dar una charla/taller? Completa el formulario y te responderé lo antes posible.
-			</p>
 			<div class="form-placeholder">
-				<p>Para ponerte en contacto, <a href="https://www.linkedin.com/in/ulises-rubino/">agrégame en Linkedin!</a> </p>
-				<p>También puedes escribirme al correo a través de <a href="https://mailxto.com/1jo3i5fbe2"> este enlace</a></p>
+				<div class="calendly-invite" role="region" aria-label="Reservar llamada">
+					<p>¿Quieres agendar una llamada 1 a 1 conmigo? Reserva tu espacio directamente aquí:</p>
+					<a href="https://calendly.com/urubino/1-on-1-with-ulises" class="button calendly-btn" target="_blank" rel="noopener">
+						Reservar llamada por Calendly
+					</a>
+				</div>
+				<p>Para ponerte en contacto, <a href="https://www.linkedin.com/in/ulises-rubino/">agrégame en LinkedIn</a>.</p>
+				<p>También puedes escribirme al correo a través de <a href="https://mailxto.com/1jo3i5fbe2">este enlace</a>.</p>
 			</div>
 		</section>
 	</main>
