@@ -1,12 +1,16 @@
+/* Fija el header al tope y lo hace visible siempre */
 .header {
-	position: sticky;
+	position: fixed;
 	top: 0;
+	left: 0;
 	width: 100%;
 	background: var(--azul-oceano);
 	z-index: 1000;
 	box-shadow: 0 2px 8px rgba(28,40,51,0.10);
+	transition: background 0.25s;
 }
 
+/* Centra el contenido y controla el espacio interno */
 .header__container {
 	display: flex;
 	align-items: center;
@@ -14,24 +18,30 @@
 	max-width: 1100px;
 	margin: 0 auto;
 	padding: 0.5rem 1rem;
+	box-sizing: border-box;
 }
 
+/* Logo con altura estándar, adaptable a dispositivos pequeños */
 .header__logo {
 	height: 48px;
 	width: auto;
 }
 
+/* Navegación principal */
 .header__nav {
 	display: flex;
-	gap: 1.5rem;
+	gap: 1.3rem;
+	flex-wrap: wrap;
 }
 
+/* Enlaces de navegación, con foco y hover claramente visibles */
 .header__link {
 	color: var(--color-texto-principal);
 	font-weight: 600;
 	padding: 0.5rem 0;
 	border-bottom: 2px solid transparent;
 	transition: border 0.2s, color 0.2s;
+	outline: none;
 }
 
 .header__link.active,
@@ -41,20 +51,72 @@
 	border-bottom: 2px solid var(--amarillo-acento);
 }
 
+/* Redes sociales: flexibles y alineadas */
 .header__social {
 	display: flex;
 	gap: 1rem;
+	align-items: center;
 }
 
+/* Enlace del icono social */
 .header__social-link {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	color: var(--color-texto-principal);
-	font-size: 1.25rem;
-	transition: color 0.2s;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background: transparent;
+	transition: background 0.2s;
+	outline: none;
 }
 
-.header__social-link:hover {
-	color: var(--purpura-suave);
+/* Icono de red social con imagen PNG de tamaño fijo */
+.header__social-link img {
+	width: 24px;
+	height: 24px;
+	display: block;
+	object-fit: contain;
+	filter: grayscale(0.15) brightness(0.92);
+	transition: filter 0.2s;
+}
+
+/* Efecto visual accesible al pasar o enfocar */
+.header__social-link:hover img,
+.header__social-link:focus img {
+	filter: brightness(1.18) drop-shadow(0 0 2px var(--purpura-suave));
+}
+
+/* Accesibilidad: foco visible para teclado en el enlace de icono */
+.header__social-link:focus {
+	box-shadow: 0 0 0 2px var(--purpura-suave);
+	background: rgba(147, 112, 219, 0.07);
+}
+
+/* RESPONSIVE: Mobile first */
+@media (max-width: 700px) {
+	.header__container {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 0.5rem 0.5rem;
+	}
+	.header__nav {
+		flex-wrap: wrap;
+		gap: 0.7rem;
+		margin-top: 0.5rem;
+	}
+	.header__logo {
+		height: 38px;
+	}
+}
+
+/* Espacio superior para compensar el header fijo (afecta main, agregar en global si usas header fijo) */
+body > main {
+	padding-top: 70px;
+}
+
+@media (max-width: 600px) {
+	body > main {
+		padding-top: 65px;
+	}
 }

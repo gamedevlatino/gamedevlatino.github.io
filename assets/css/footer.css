@@ -15,10 +15,32 @@
 }
 
 .footer__social-link {
-	color: var(--amarillo-acento);
-	font-size: 1.25rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background: transparent;
+	transition: background 0.2s;
+	outline: none;
 }
 
-.footer__social-link:hover {
-	color: var(--purpura-suave);
+.footer__social-link img {
+	width: 24px;
+	height: 24px;
+	display: block;
+	object-fit: contain;
+	filter: grayscale(0.15) brightness(0.92);
+	transition: filter 0.2s;
+}
+
+.footer__social-link:hover img,
+.footer__social-link:focus img {
+	filter: brightness(1.18) drop-shadow(0 0 2px var(--purpura-suave));
+}
+
+.footer__social-link:focus {
+	box-shadow: 0 0 0 2px var(--purpura-suave);
+	background: rgba(147, 112, 219, 0.07);
 }
