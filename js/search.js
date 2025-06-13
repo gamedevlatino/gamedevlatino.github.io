@@ -1,8 +1,11 @@
 // Buscador universal para Gamedev Latino
-document.addEventListener('DOMContentLoaded', function () {
+
+function initSiteSearch() {
 	const searchForm = document.getElementById('site-search');
 	const searchInput = document.getElementById('search-input');
 	const resultsBox = document.getElementById('search-results');
+
+	if (!searchForm || !searchInput || !resultsBox) return;
 
 	// Index de ejemplo: agrega aquí tus contenidos reales
 	const CONTENT_INDEX = [
@@ -82,4 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			searchInput.setAttribute("aria-expanded", "false");
 		}
 	});
-});
+}
+
+// Esperar a que el footer esté realmente cargado
+document.addEventListener('footerLoaded', initSiteSearch);
