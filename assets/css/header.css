@@ -120,3 +120,53 @@ body > main {
 		padding-top: 65px;
 	}
 }
+
+/* MOBILE-FIRST: Ajusta el header para pantallas pequeñas */
+@media (max-width: 700px) {
+	.header__container {
+		flex-direction: column;
+		align-items: stretch;
+		padding: 0.5rem 0.5rem;
+		gap: 0.3rem;
+	}
+
+	.header__logo {
+		height: 32px;
+		margin: 0 auto 0.4rem auto;
+	}
+
+	.header__nav {
+		flex-direction: column;
+		align-items: stretch;
+		gap: 0.3rem;
+		margin: 0.2rem 0;
+	}
+
+	.header__link {
+		padding: 0.6rem 0.2rem;
+		font-size: 1.06rem;
+		border-bottom: none;
+		border-left: 4px solid transparent;
+		text-align: left;
+	}
+
+	.header__link.active,
+	.header__link:focus,
+	.header__link:hover {
+		color: var(--amarillo-acento);
+		border-left: 4px solid var(--amarillo-acento);
+		border-bottom: none;
+	}
+
+	.header__social {
+		justify-content: flex-start;
+		margin-bottom: 0.3rem;
+	}
+}
+
+/* Reduce el espacio superior para el main en móvil */
+@media (max-width: 600px) {
+	body > main {
+		padding-top: 55px;
+	}
+}

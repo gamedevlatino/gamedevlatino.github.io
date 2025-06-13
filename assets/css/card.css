@@ -61,3 +61,38 @@
 	text-decoration: none;
 	transition: background 0.2s;
 }
+
+.destacados-list {
+	grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+	gap: 1.3rem;
+	margin-top: 1.5rem;
+}
+
+.destacado-card {
+	align-items: flex-start;
+	flex-direction: row;
+	gap: 1rem;
+	padding: 0.8rem 0.6rem;
+}
+
+.destacado-icon {
+	width: 48px;
+	height: 48px;
+	object-fit: contain;
+	margin: 0 0.4rem 0 0;
+	background: #fff;
+	border-radius: 0.7rem;
+	box-shadow: 0 2px 8px rgba(28,40,51,0.08);
+}
+
+@media (max-width: 700px) {
+	.destacado-card {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 0.5rem;
+	}
+	.destacado-icon {
+		margin: 0 0 0.4rem 0;
+	}
+}

@@ -14,26 +14,62 @@
 <body>
 	<div id="header-include"></div>
 	<main>
-		<section aria-labelledby="bienvenida">
-			<h1 id="bienvenida">Bienvenido a Gamedev Latino</h1>
-			<p>
-				<strong>Gamedev Latino</strong> es tu puerta de entrada al mundo del desarrollo de videojuegos en Latinoamérica. Aquí encontrarás recursos gratuitos, guías prácticas, ebooks y mucho más para que puedas dar tus primeros pasos y avanzar en la industria, sin importar tu experiencia previa.
-			</p>
+		<section class="hero" aria-labelledby="bienvenida">
+			<div class="hero__image">
+				<img src="/assets/img/logo.png" alt="Logo de Gamedev Latino" class="hero__logo">
+			</div>
+			<div class="hero__content">
+				<h1 id="bienvenida">Bienvenido a Gamedev Latino</h1>
+				<p>
+					Gamedev Latino es tu puerta de entrada al mundo del desarrollo de videojuegos en Latinoamérica. Aquí encontrarás recursos gratuitos, guías prácticas, ebooks y mucho más para que puedas dar tus primeros pasos y avanzar en la industria, sin importar tu experiencia previa.
+				</p>
+			</div>
 		</section>
 		<section aria-labelledby="destacados">
 			<h2 id="destacados">Contenido Destacado</h2>
-			<ul>
-				<li><a href="/ebooks.html">Ebooks y Guías descargables</a></li>
-				<li><a href="/guias.html">Tutoriales paso a paso</a></li>
-				<li><a href="/videos.html">Videos y entrevistas</a></li>
-				<li><a href="/cursos.html">Cursos recomendados</a></li>
-			</ul>
+			<div class="card-list destacados-list">
+				<article class="card destacado-card">
+					<img src="/assets/img/icons/ebooks.png" alt="Ícono de Ebooks" class="destacado-icon" />
+					<div class="card__content">
+						<h3 class="card__title">Ebooks y Guías</h3>
+						<p class="card__desc">Descarga guías y manuales 100% en español para aprender sobre desarrollo de videojuegos.</p>
+						<a href="/ebooks.html" class="card__button">Ver ebooks</a>
+					</div>
+				</article>
+				<article class="card destacado-card">
+					<img src="/assets/img/icons/guias.png" alt="Ícono de Tutoriales" class="destacado-icon" />
+					<div class="card__content">
+						<h3 class="card__title">Tutoriales paso a paso</h3>
+						<p class="card__desc">Aprende con guías prácticas y visuales sobre motores, arte, diseño y más.</p>
+						<a href="/guias.html" class="card__button">Ver guías</a>
+					</div>
+				</article>
+				<article class="card destacado-card">
+					<img src="/assets/img/icons/videos.png" alt="Ícono de Videos" class="destacado-icon" />
+					<div class="card__content">
+						<h3 class="card__title">Videos y Entrevistas</h3>
+						<p class="card__desc">Contenido audiovisual y entrevistas con desarrolladores latinos.</p>
+						<a href="/videos.html" class="card__button">Ver videos</a>
+					</div>
+				</article>
+				<article class="card destacado-card">
+					<img src="/assets/img/icons/cursos.png" alt="Ícono de Cursos" class="destacado-icon" />
+					<div class="card__content">
+						<h3 class="card__title">Cursos recomendados</h3>
+						<p class="card__desc">Lista curada de cursos gratuitos y de bajo costo para avanzar en tu aprendizaje.</p>
+						<a href="/cursos.html" class="card__button">Ver cursos</a>
+					</div>
+				</article>
+			</div>
 		</section>
 		<section aria-labelledby="sobre-mi">
-			<h2 id="sobre-mi">Sobre Ulises Rubino</h2>
-			<p>
-				Soy Ulises Rubino, desarrollador y formador apasionado por los videojuegos. Mi misión es acercar la educación y la inspiración a toda la comunidad hispanohablante interesada en crear videojuegos, superando juntos los desafíos únicos de nuestra región.
-			</p>
+			<h2 id="sobre-mi">Sobre mí</h2>
+			<div class="sobre-mi">
+				<img src="/assets/img/ulises.png" alt="Foto de Ulises Rubino" class="sobre-mi__foto">
+				<p>
+					Soy Ulises Rubino, desarrollador y formador apasionado por los videojuegos. Mi misión es acercar la educación y la inspiración a toda la comunidad hispanohablante interesada en crear videojuegos, superando juntos los desafíos únicos de nuestra región. Si tienes ganas de aprender, ¡acá vas a encontrar tu lugar!
+				</p>
+			</div>
 		</section>
 		<section aria-labelledby="cta">
 			<h2 id="cta">¿Listo para comenzar?</h2>
@@ -42,5 +78,6 @@
 	</main>
 	<div id="footer-include"></div>
 	<script src="/js/include.js"></script>
+	<script src="/js/search.js"></script>
 </body>
 </html>

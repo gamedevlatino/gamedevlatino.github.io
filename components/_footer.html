@@ -1,4 +1,11 @@
 <footer class="footer" role="contentinfo">
+	<form id="site-search" class="footer__search" role="search" aria-label="Buscar en Gamedev Latino" autocomplete="off">
+		<label for="search-input" class="visually-hidden">Buscar</label>
+		<input type="search" id="search-input" name="search" placeholder="Buscar recursos, guías, videos..." aria-label="Buscar contenido" />
+		<button type="submit" aria-label="Buscar">
+			🔍
+		</button>
+	</form>
 	<div class="footer__social">
 		<a href="https://www.linkedin.com/in/ulisesrubino" class="footer__social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
 			<img src="/assets/img/social/linkedin.png" alt="LinkedIn" width="24" height="24" loading="lazy"/>
@@ -9,3 +16,4 @@
 	</div>
 	<p>© 2025 Gamedev Latino. Todos los derechos reservados. Sitio creado por Ulises Rubino para la comunidad de desarrollo de videojuegos en Latinoamérica.</p>
 </footer>
+<div id="search-results" aria-live="polite"></div>
